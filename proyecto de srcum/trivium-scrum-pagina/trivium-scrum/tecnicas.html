@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Técnicas de Aseguramiento de la Calidad | Trivium Scrum</title>
+  <meta name="description" content="Niveles de prueba (unitarias, integración y sistema) y tipos de prueba (caja negra y caja blanca).">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="inner">
+  <a class="back" href="index.html">inicio</a>
+
+  <main class="wrap">
+    <h1 class="page-title">Técnicas de Aseguramiento de la Calidad</h1>
+
+    <div class="intro">
+      <h2>Técnicas de Aseguramiento de la Calidad</h2>
+      <p>Las técnicas de aseguramiento de la calidad permiten verificar que el software cumpla con los requisitos establecidos y detectar errores durante las diferentes etapas de su desarrollo. Las pruebas de software son una de las principales actividades utilizadas para evaluar el funcionamiento de una aplicación y aumentar la confianza en su calidad.</p><p>Las pruebas pueden organizarse de acuerdo con diferentes criterios. Por un lado, los niveles de prueba determinan qué parte del sistema se está evaluando, desde componentes individuales hasta el sistema completo. Por otro lado, los tipos de prueba indican cómo se analiza el software, por ejemplo, observando su comportamiento externo o examinando su estructura interna.</p><p>En esta sección se presentan tres niveles principales: pruebas unitarias, pruebas de integración y pruebas de sistema. También se explican las pruebas de caja negra y caja blanca, que permiten evaluar el software desde diferentes perspectivas.</p><p>El objetivo es comprender qué analiza cada prueba, cuándo se utiliza y qué tipo de errores permite detectar.</p>
+    </div>
+
+    <section class="panel" style="margin-top:56px" aria-labelledby="tec-panel">
+      <h2 class="panel__title" id="tec-panel">Niveles de pruebas</h2>
+      <div class="acc "><h3 class="acc__h"><button class="acc__btn" id="tec-unitarias" type="button" aria-expanded="false" aria-controls="tec-unitarias-p"><span class="acc__label">Pruebas Unitarias</span></button></h3><div class="acc__panel" id="tec-unitarias-p" role="region" aria-labelledby="tec-unitarias" hidden><p>Las pruebas unitarias verifican el funcionamiento de las partes más pequeñas del software, como una función, un método o una clase, de forma aislada.</p><p>Suelen ser realizadas por los propios desarrolladores mientras programan y pueden automatizarse para ejecutarse de manera rápida y repetida.</p><p>Permiten detectar errores en etapas tempranas, cuando corregirlos resulta más sencillo y económico.</p></div></div><div class="acc "><h3 class="acc__h"><button class="acc__btn" id="tec-integracion" type="button" aria-expanded="false" aria-controls="tec-integracion-p"><span class="acc__label">Pruebas de Integración</span></button></h3><div class="acc__panel" id="tec-integracion-p" role="region" aria-labelledby="tec-integracion" hidden><p>Las pruebas de integración comprueban que distintos componentes, módulos o servicios funcionen correctamente cuando se combinan entre sí.</p><p>Buscan detectar fallas en las interfaces y en el intercambio de datos, por ejemplo, entre una aplicación y una base de datos o entre dos servicios.</p><p>Se realizan después de las pruebas unitarias, a medida que los componentes se van uniendo.</p></div></div><div class="acc "><h3 class="acc__h"><button class="acc__btn" id="tec-sistema" type="button" aria-expanded="false" aria-controls="tec-sistema-p"><span class="acc__label">Pruebas de Sistema</span></button></h3><div class="acc__panel" id="tec-sistema-p" role="region" aria-labelledby="tec-sistema" hidden><p>Las pruebas de sistema evalúan el software completo e integrado, en un entorno lo más parecido posible al real.</p><p>Verifican que se cumplan los requisitos funcionales y no funcionales, como el rendimiento o la seguridad, recorriendo los flujos completos de uso.</p><p>Suelen ser realizadas por un equipo de pruebas independiente del desarrollo.</p></div></div>
+      <h2 class="panel__title panel__title--sub">Tipos de pruebas</h2>
+      <div class="acc "><h3 class="acc__h"><button class="acc__btn" id="tec-negra" type="button" aria-expanded="false" aria-controls="tec-negra-p"><span class="acc__label">Pruebas de Caja Negra</span></button></h3><div class="acc__panel" id="tec-negra-p" role="region" aria-labelledby="tec-negra" hidden><p>Las pruebas de caja negra evalúan el comportamiento externo del software sin considerar cómo está construido por dentro.</p><p>Se diseñan a partir de los requisitos: se proporcionan entradas y se comprueba que las salidas obtenidas sean las esperadas.</p><p>Entre sus técnicas se encuentran la partición de equivalencia, el análisis de valores límite y las tablas de decisión.</p><p>Permiten detectar funciones faltantes o incorrectas, pero pueden dejar sin recorrer caminos internos del código.</p></div></div><div class="acc "><h3 class="acc__h"><button class="acc__btn" id="tec-blanca" type="button" aria-expanded="false" aria-controls="tec-blanca-p"><span class="acc__label">Pruebas de Caja Blanca</span></button></h3><div class="acc__panel" id="tec-blanca-p" role="region" aria-labelledby="tec-blanca" hidden><p>Las pruebas de caja blanca analizan la estructura interna del software. En este tipo de prueba se conoce el código fuente y la lógica utilizada para construir el programa.</p><p>El análisis puede centrarse en las instrucciones, condiciones, estructuras y diferentes caminos de ejecución que puede seguir el programa.</p><p>Este enfoque permite comprobar que la lógica interna funciona correctamente y que las diferentes posibilidades de ejecución hayan sido evaluadas.</p></div></div>
+      <h2 class="panel__title panel__title--sub">Cuadros comparativos</h2>
+      <div class="table-wrap"><table><caption>Comparación de los niveles de prueba</caption><thead><tr><th scope="col">Nivel</th><th scope="col">¿Qué se prueba?</th><th scope="col">¿Quién la realiza?</th><th scope="col">Ejemplo</th></tr></thead><tbody>
+<tr><th scope="row">Unitarias</th><td>La unidad más pequeña del código (función, método o clase), de forma aislada</td><td>Desarrolladores, mientras programan</td><td>Verificar que la función <code>calcularDescuento()</code> devuelve el valor esperado</td></tr>
+<tr><th scope="row">Integración</th><td>La interacción entre módulos, servicios o bases de datos</td><td>Desarrolladores y testers, al combinar componentes</td><td>Comprobar que el módulo de pedidos guarda correctamente los datos en la base</td></tr>
+<tr><th scope="row">Sistema</th><td>El sistema completo frente a los requisitos, en un entorno similar al real</td><td>Equipo de pruebas</td><td>Recorrer el flujo completo de una compra online</td></tr>
+</tbody></table></div>
+      <div class="table-wrap"><table><caption>Comparación de los tipos de prueba</caption><thead><tr><th scope="col">Aspecto</th><th scope="col">Caja negra</th><th scope="col">Caja blanca</th></tr></thead><tbody>
+<tr><th scope="row">¿Qué analiza?</th><td>El comportamiento externo: entradas y salidas</td><td>La estructura interna y la lógica del código</td></tr>
+<tr><th scope="row">Conocimiento del código</th><td>No es necesario</td><td>Es imprescindible</td></tr>
+<tr><th scope="row">Se basa en</th><td>Los requisitos y las especificaciones</td><td>El código fuente y su diseño</td></tr>
+<tr><th scope="row">Técnicas frecuentes</th><td>Partición de equivalencia, valores límite, tablas de decisión</td><td>Cobertura de sentencias, de decisiones y de caminos</td></tr>
+<tr><th scope="row">Permite detectar</th><td>Funciones faltantes o incorrectas y errores de interfaz</td><td>Errores de lógica y código que nunca se ejecuta</td></tr>
+</tbody></table></div>
+    </section>
+
+    <nav class="pager" aria-label="Otras secciones"><a href="fundamentos.html" rel="prev">← Fundamentos de Calidad</a><a href="herramientas.html" rel="next">Herramientas de Calidad →</a></nav>
+    <footer class="brand">Trivium<br>Scrum</footer>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

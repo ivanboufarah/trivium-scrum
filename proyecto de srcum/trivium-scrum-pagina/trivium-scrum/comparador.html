@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comparador de metodologías | Trivium Scrum</title>
+  <meta name="description" content="Compará modelos tradicionales y metodologías ágiles en una tabla interactiva.">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/componentes.css">
+</head>
+<body class="inner">
+  <a class="back" href="index.html">inicio</a>
+
+  <main class="wrap">
+    <h1 class="page-title">Comparador de Metodologías</h1>
+
+    <div class="intro"><h2 class="sr-only">Introducción</h2><p>Seleccioná dos o más metodologías para ver una tabla comparativa con sus características clave.</p></div>
+    <section class="panel" aria-labelledby="cmp-t">
+      <h2 class="panel__title" id="cmp-t">Comparador de metodologías</h2>
+      <fieldset class="cmp-pick" id="cmpPick"><legend>Elegí qué metodologías comparar:</legend></fieldset>
+      <p class="cmp-msg" id="cmpMsg" role="status" hidden></p>
+      <div id="cmpOut" aria-live="polite"></div>
+    </section>
+    <nav class="pager" aria-label="Otras secciones"><a href="metodologias-detalle.html" rel="prev">← Metodologías en detalle</a><a href="encuesta.html" rel="next">Encuesta →</a></nav>
+    <footer class="brand">Trivium<br>Scrum</footer>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/comparador.js"></script>
+</body>
+</html>

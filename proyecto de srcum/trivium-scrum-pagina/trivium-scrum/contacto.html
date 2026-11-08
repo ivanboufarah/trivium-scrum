@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto | Trivium Scrum</title>
+  <meta name="description" content="Formulario para enviar consultas o feedback al equipo Trivium Scrum.">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/componentes.css">
+</head>
+<body class="inner">
+  <a class="back" href="index.html">inicio</a>
+
+  <main class="wrap">
+    <h1 class="page-title">Contacto</h1>
+
+    <div class="intro"><h2 class="sr-only">Introducción</h2><p>¿Tenés una consulta o querés dejarnos feedback? Escribinos.</p></div>
+    <section class="panel" aria-labelledby="con-t" style="padding-bottom:30px">
+      <h2 class="panel__title" id="con-t">Contactarnos</h2>
+      <form class="form" id="contactForm" novalidate style="margin-left:34px">
+        <div class="fld"><label for="nombre">Nombre</label><input id="nombre" name="nombre" type="text" autocomplete="name" maxlength="60" required aria-describedby="nombre-err"><p class="err" id="nombre-err" role="alert"></p></div>
+        <div class="fld"><label for="email">Correo electrónico</label><input id="email" name="email" type="email" autocomplete="email" maxlength="100" required aria-describedby="email-err"><p class="err" id="email-err" role="alert"></p></div>
+        <div class="fld"><label for="mensaje">Mensaje <small>(mínimo 10 caracteres)</small></label><textarea id="mensaje" name="mensaje" maxlength="500" required aria-describedby="mensaje-err msgCount"></textarea><p class="err" id="mensaje-err" role="alert"></p><p class="count-chars" id="msgCount">0 / 500</p></div>
+        <div class="cta-row"><a class="btn btn--ghost" href="index.html">Volver</a><button class="btn" type="submit">Enviar</button></div>
+      </form>
+      <div class="form-ok" id="formOk" tabindex="-1" role="status" hidden style="margin-left:34px;max-width:760px">
+        <h2>¡Gracias, <span id="okName"></span>!</h2>
+        <p>Tu mensaje fue enviado correctamente. Te responderemos a la brevedad.</p>
+        <div class="cta-row"><button class="btn" type="button" id="again">Enviar otro mensaje</button><a class="btn btn--ghost" href="index.html">Volver al inicio</a></div>
+      </div>
+    </section>
+    <nav class="pager" aria-label="Otras secciones"><a href="recursos.html" rel="prev">← Recursos y aprendizaje</a></nav>
+    <footer class="brand">Trivium<br>Scrum</footer>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/contacto.js"></script>
+</body>
+</html>

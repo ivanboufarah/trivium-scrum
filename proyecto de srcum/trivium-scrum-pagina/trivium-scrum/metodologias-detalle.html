@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Metodologías en detalle | Trivium Scrum</title>
+  <meta name="description" content="Scrum a fondo con cronograma interactivo y tablero Kanban con límite WIP.">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/componentes.css">
+</head>
+<body class="inner">
+  <a class="back" href="index.html">inicio</a>
+
+  <main class="wrap">
+    <h1 class="page-title">Metodologías en Detalle</h1>
+
+    <div class="intro"><h2 class="sr-only">Introducción</h2><p>Profundizá en Scrum con un cronograma interactivo y practicá cómo funciona Kanban con un tablero que limita el trabajo en proceso (WIP).</p></div>
+    <nav class="pillbar" aria-label="Secciones de esta página">
+      <a class="sub-pill" data-go href="#scrum-detalle">Scrum a fondo</a>
+      <a class="sub-pill" data-go href="#kanban-detalle">Kanban</a>
+    </nav>
+
+    <section class="panel" id="scrum-detalle" aria-labelledby="scrum-d-t">
+      <h2 class="panel__title" id="scrum-d-t">Scrum a fondo</h2>
+      <p class="lead">Scrum es un marco de trabajo ágil que organiza el desarrollo en Sprints de una a cuatro semanas para entregar valor, inspeccionar el progreso y mejorar de manera continua.</p>
+
+      <div class="tabs" role="tablist" aria-label="Contenido de Scrum">
+        <button class="tab" type="button" role="tab" id="t-roles" aria-controls="p-roles" aria-selected="true">1. Roles</button>
+        <button class="tab" type="button" role="tab" id="t-event" aria-controls="p-event" aria-selected="false" tabindex="-1">2. Eventos / Ceremonias</button>
+        <button class="tab" type="button" role="tab" id="t-artef" aria-controls="p-artef" aria-selected="false" tabindex="-1">3. Artefactos</button>
+      </div>
+      <div class="tabpanel" role="tabpanel" id="p-roles" aria-labelledby="t-roles"><div class="cards3">
+        <div class="mini"><h4>Product Owner</h4><p>Maximiza el valor del producto y ordena el Product Backlog según las necesidades y prioridades.</p></div>
+        <div class="mini"><h4>Scrum Master</h4><p>Ayuda a que Scrum se comprenda y se aplique correctamente, y promueve la mejora de la efectividad del equipo.</p></div>
+        <div class="mini"><h4>Developers</h4><p>Desarrollan el producto y crean un incremento funcional que cumple con los criterios de calidad acordados.</p></div>
+      </div></div>
+      <div class="tabpanel" role="tabpanel" id="p-event" aria-labelledby="t-event" hidden><div class="cards3">
+        <div class="mini"><h4>Sprint</h4><p>Período de duración fija (un mes o menos) en el que se trabaja para alcanzar un objetivo.</p></div>
+        <div class="mini"><h4>Sprint Planning</h4><p>El equipo define por qué el Sprint es valioso, qué trabajo realizará y cómo lo llevará adelante.</p></div>
+        <div class="mini"><h4>Daily Scrum</h4><p>Reunión diaria de 15 minutos para inspeccionar el progreso hacia el objetivo y adaptar el plan.</p></div>
+        <div class="mini"><h4>Sprint Review</h4><p>Se inspecciona el resultado del Sprint con las partes interesadas y se evalúan los próximos pasos.</p></div>
+        <div class="mini"><h4>Sprint Retrospective</h4><p>El equipo analiza cómo trabajó y define mejoras para el siguiente Sprint.</p></div>
+      </div><p class="fine">Más abajo podés ver estos eventos en un cronograma interactivo.</p></div>
+      <div class="tabpanel" role="tabpanel" id="p-artef" aria-labelledby="t-artef" hidden><div class="cards3">
+        <div class="mini"><h4>Product Backlog</h4><p>Lista ordenada y evolutiva de todo lo que se necesita para mejorar el producto.</p></div>
+        <div class="mini"><h4>Sprint Backlog</h4><p>Contiene el objetivo del Sprint, los elementos del Product Backlog seleccionados y el plan para entregar el incremento.</p></div>
+        <div class="mini"><h4>Incremento</h4><p>Resultado funcional que se suma al producto y cumple con la Definición de Hecho, el acuerdo sobre cuándo el trabajo está terminado.</p></div>
+      </div></div>
+
+      <div class="sprint-lab">
+        <h3>Cronograma interactivo de un Sprint</h3>
+        <p>Elegí cuánto dura el Sprint y hacé clic en un evento: se ilumina en el calendario y ves su duración sugerida y su objetivo.</p>
+        <div class="sprint-controls"><span id="lenLabel">Duración del Sprint:</span><div class="seg" id="lenSeg" role="group" aria-labelledby="lenLabel"></div></div>
+        <div class="timeline"><div class="weeks" id="weeks" aria-label="Calendario del Sprint" style="display:grid;gap:8px"></div></div>
+        <div class="events" id="events" role="group" aria-label="Eventos de Scrum"></div>
+        <div class="ev-detail" id="evDetail" aria-live="polite"></div>
+        <p class="fine">Las duraciones son orientativas y se basan en la Guía de Scrum para un Sprint de un mes (Planning hasta 8 h, Review hasta 4 h y Retrospective hasta 3 h); en Sprints más cortos los eventos suelen durar menos.</p>
+      </div>
+    </section>
+
+    <section class="panel" id="kanban-detalle" aria-labelledby="kanban-d-t">
+      <h2 class="panel__title" id="kanban-d-t">Kanban: gestión del flujo de trabajo</h2>
+      <p class="lead">Kanban es una herramienta de gestión de procesos que hace visible el trabajo en un tablero y limita cuántas tareas se hacen a la vez (<strong>WIP</strong>, Work in Progress). Menos cosas en paralelo significa menos cuellos de botella y entregas más rápidas.</p>
+      <p class="lead"><strong>Probalo vos:</strong> arrastrá las tarjetas entre columnas (o usá los botones ◀ ▶). La columna «En proceso» tiene un límite WIP: si ya está llena, no podés empezar algo nuevo hasta terminar otra tarea.</p>
+      <div class="kb-controls">
+        <label for="wipSel">Límite WIP:</label>
+        <select id="wipSel"><option>2</option><option selected>3</option><option>4</option><option>5</option></select>
+        <input type="text" id="newCard" placeholder="Nueva tarea (ej: Revisar glosario)" maxlength="50" aria-label="Título de la nueva tarea">
+        <button class="btn" type="button" id="addBtn">Agregar a «Por hacer»</button>
+        <button class="btn btn--ghost" type="button" id="resetBtn">Reiniciar tablero</button>
+      </div>
+      <div class="board" id="board">
+        <div class="col" id="col-todo" data-col="todo"><div class="col-h"><h3>Por hacer</h3><span class="count" data-count="todo">0</span></div><div data-list="todo"></div></div>
+        <div class="col" id="col-doing" data-col="doing"><div class="col-h"><h3>En proceso</h3><span class="count" data-count="doing">0</span></div><div data-list="doing"></div></div>
+        <div class="col" id="col-done" data-col="done"><div class="col-h"><h3>Hecho</h3><span class="count" data-count="done">0</span></div><div data-list="done"></div></div>
+      </div>
+      <div class="toast" id="toast" role="status" aria-live="polite">💡 Tip: terminá antes de empezar. Mové una tarjeta a «En proceso» para comenzar.</div>
+    </section>
+
+    <nav class="pager" aria-label="Otras secciones"><a href="metodologias-agiles.html" rel="prev">← Metodologías ágiles</a><a href="comparador.html" rel="next">Comparador →</a></nav>
+    <footer class="brand">Trivium<br>Scrum</footer>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/detalle.js"></script>
+</body>
+</html>
